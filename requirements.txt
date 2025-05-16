@@ -1,0 +1,13 @@
+opencv-python
+pytesseract
+easyocr
+transformers
+torch
+tensorflow
+scikit-learn
+pandas
+numpy
+matplotlib
+nltk
+spacy
+requests 

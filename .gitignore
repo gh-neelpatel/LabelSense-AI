@@ -1,0 +1,53 @@
+# Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+
+# Environment variables
+.env
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Local development settings
+.idea/
+.vscode/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Local model cache
+*.pickle
+*.pkl
+
+# Large files and model checkpoints
+*.h5
+*.ckpt
+*.model
+*.bin
+*.pt
+*.pth
+
+# Ignore all logs
+*.log
+
+# Keep specific model files if needed
+# !models/important_model.h5
+
+*.csv
+*.jpg
+*.png
+results/
+Ckpt 4/results_table.md
+Ckpt 4/analysis.md 
