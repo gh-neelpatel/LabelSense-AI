@@ -66,21 +66,6 @@ The dietary classifiers have been integrated into the main LabelSense.AI system 
 
 This integration ensures that users can get accurate dietary classifications regardless of the complexity of the ingredient list, while optimizing for both performance and cost.
 
-### Error Analysis: Model Disagreement and Edge Cases
-
-To better understand the strengths and weaknesses of each approach, we analyzed cases where the models disagreed:
-
-- **Rule-Based vs. RoBERTa:** We identified ingredient lists that were misclassified by the rule-based system but correctly classified by RoBERTa. These often included products with uncommon or ambiguous ingredients not present in the rule-based keyword lists, or cases where context was important (e.g., "natural flavors," "enzymes").
-- **RoBERTa vs. GPT-4o-mini:** We also examined cases where RoBERTa failed but GPT-4o-mini succeeded. These typically involved complex ingredient phrasing, rare ingredients, or multi-lingual/abbreviated terms that required broader world knowledge or reasoning.
-- **Common Failure Cases:** Across all models, errors were more likely with novel ingredients, ambiguous terms, or incomplete ingredient lists.
-
-**Example Edge Cases:**
-- A product labeled "vegan" but containing ambiguous ingredients like "mono- and diglycerides" (missed by rule-based, caught by RoBERTa/GPT-4o-mini).
-- Dishes with regional ingredient names (e.g., "paneer" or "seitan")—sometimes missed by RoBERTa, but correctly classified by GPT-4o-mini due to its broader knowledge base.
-
-This qualitative analysis helps reveal not just which model is more accurate, but why, and where further improvements or data curation are needed.
-
-
 ## Reproducing the Results
 
 To reproduce the evaluation results:
