@@ -4,7 +4,7 @@
 
 This checkpoint presents an innovative approach to dietary classification that goes beyond the traditional tiered architecture established in Checkpoint 4. Based on the detailed misclassification analysis revealing specific error patterns for each model, we introduce an **Intelligent Ensemble with Error-Pattern Learning (IEEPL)** system that dynamically learns when to trust each model based on input characteristics and historical error patterns.
 
-## Motivation - Insights from Checkpoint 4 Analysis
+## Motivation - Professor's feedback for Checkpoint 4 Analysis
 
 ### Key Findings That Motivated This Innovation
 
@@ -17,9 +17,9 @@ Our comprehensive misclassification analysis in Checkpoint 4 revealed specific, 
 - **15%** failed on complex ingredient combinations
 
 #### 2. **RoBERTa Model Failures (7.7% of cases)**
-- **35%** failed on short ingredient lists (<3 ingredients)
+- **35%** failed on short ingredient lists (less than 3 ingredients)
 - **30%** failed due to training data bias (cultural foods)
-- **20%** failed on ambiguous cases (low confidence <0.7)
+- **20%** failed on ambiguous cases (low confidence less than 0.7)
 - **15%** failed on single-ingredient products
 
 #### 3. **Critical Observation**
@@ -283,21 +283,21 @@ The reliability predictor identified key features:
 
 ## What Worked and What Didn't
 
-### ✅ **What Worked Well**
+### **What Worked Well**
 
 1. **Feature-Based Reliability Prediction**: Successfully learned patterns from Checkpoint 4 data
 2. **Dynamic Weighting**: Improved accuracy by adapting to input characteristics
 3. **Conflict Resolution**: Effectively handled model disagreements
 4. **Confidence Calibration**: More reliable uncertainty estimates
 
-### ❌ **What Didn't Work as Expected**
+### **What Didn't Work as Expected**
 
 1. **Cold Start Problem**: Performance lower on completely novel ingredient combinations not seen in training
 2. **Computational Overhead**: 40% increase in inference time due to meta-model predictions
 3. **Feature Engineering**: Some features were redundant; required iterative refinement
 4. **Overfitting Risk**: Small training dataset led to overfitting on some patterns
 
-### 🤔 **Unexpected Discoveries**
+### **Unexpected Discoveries**
 
 1. **Context Matters More Than Expected**: Text complexity was more predictive than individual ingredient flags
 2. **Cultural Bias More Pervasive**: RoBERTa's cultural limitations affected more cases than initially measured

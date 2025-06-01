@@ -156,7 +156,7 @@ Our detailed analysis of 300 samples revealed specific patterns where models dis
 #### 6.2.2 RoBERTa Model Limitations
 
 1. **Short Ingredient Lists (35% of RoBERTa errors)**
-   - Fails on: products with <3 ingredients
+   - Fails on: products with less than 3 ingredients
    - Reason: Insufficient context for transformer model
 
 2. **Training Data Bias (30% of RoBERTa errors)**  
